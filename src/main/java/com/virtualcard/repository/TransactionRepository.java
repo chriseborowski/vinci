@@ -13,4 +13,5 @@ public interface TransactionRepository extends JpaRepository<Transaction, Long> 
     List<Transaction> findByVirtualCardId(Long virtualCardId);
     List<Transaction> findByVirtualCardIdAndDateBetween(Long virtualCardId, LocalDateTime startDate, LocalDateTime endDate);
     List<Transaction> findByTransactionBetween(LocalDateTime start, LocalDateTime end);
+    List<Transaction> findByVirtualCardAndTransactionDateBetween(Long virtualCardId, LocalDateTime startDate, LocalDateTime endDate);
 }
